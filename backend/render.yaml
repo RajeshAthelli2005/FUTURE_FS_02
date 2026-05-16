@@ -2,14 +2,19 @@ services:
   - type: web
     name: mini-crm-backend
     env: node
+    rootDir: backend
     buildCommand: npm install
     startCommand: node server.js
     envVars:
       - key: NODE_ENV
         value: production
+      - key: PORT
+        value: 5000
       - key: MONGO_URI
-        sync: false
+        value: mongodb+srv://athellirajesh321:rajesh112005@cluster0.5gnoqzs.mongodb.net/mini-crm?retryWrites=true&w=majority&appName=Cluster0
       - key: JWT_SECRET
-        sync: false
+        value: minicrm_super_secret_key_2024_rajesh
+      - key: JWT_EXPIRES_IN
+        value: 7d
       - key: CLIENT_ORIGIN
-        sync: false
+        value: https://rajeshathelli2005.github.io

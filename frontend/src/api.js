@@ -1,9 +1,7 @@
 // Centralised API helper — all requests go through here
-// In production set REACT_APP_API_URL to your backend URL
-// e.g. https://your-backend.onrender.com
 const BASE = process.env.REACT_APP_API_URL
   ? `${process.env.REACT_APP_API_URL}/api`
-  : '/api';
+  : 'https://future-fs-02-lsrc.onrender.com/api';
 
 function getToken() {
   return localStorage.getItem('crm_token');

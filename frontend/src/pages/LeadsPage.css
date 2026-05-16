@@ -1,0 +1,192 @@
+/* ═══════════════════════════════════════════════
+   LEADS PAGE  –  Dark theme
+   ═══════════════════════════════════════════════ */
+
+.leads-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Filters bar ── */
+.leads-filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 20px;
+  padding: 18px 22px;
+  backdrop-filter: blur(20px);
+}
+
+.filter-select {
+  min-width: 160px;
+}
+
+/* ── Table card ── */
+.leads-table-card {
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(30, 41, 59, 0.94));
+  border: 1px solid rgba(59, 130, 246, 0.18);
+  border-radius: 22px;
+  backdrop-filter: blur(24px);
+}
+
+.table-loading,
+.table-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 30px;
+  gap: 14px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.table-empty span {
+  font-size: 48px;
+  animation: emptyBounce 2s ease-in-out infinite;
+}
+
+@keyframes emptyBounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+.table-empty p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+}
+
+/* Table */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.leads-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.leads-table th {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 13px 16px;
+  text-align: left;
+  font-size: 10.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+}
+
+.leads-table td {
+  padding: 13px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  vertical-align: middle;
+  color: rgba(255, 255, 255, 0.75);
+  transition: all 0.2s ease;
+}
+
+.lead-row {
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.lead-row:hover {
+  background: rgba(124, 58, 237, 0.08);
+}
+
+.lead-row:hover td {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.lead-row:last-child td {
+  border-bottom: none;
+}
+
+.lead-name {
+  font-weight: 700;
+  color: #f1f5f9 !important;
+  letter-spacing: -0.2px;
+}
+
+.lead-email {
+  color: rgba(167, 139, 250, 0.8) !important;
+  font-weight: 500;
+}
+
+.lead-date {
+  color: rgba(255, 255, 255, 0.3) !important;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+/* Source tag */
+.source-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  background: rgba(124, 58, 237, 0.15);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: 999px;
+  font-size: 11px;
+  color: #a78bfa;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+/* Status select */
+.status-select {
+  border: none;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: all 0.2s ease;
+}
+
+.status-select:focus {
+  outline: none;
+}
+
+.status-new       { background: rgba(59, 130, 246, 0.2);  color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.35); }
+.status-contacted { background: rgba(245, 158, 11, 0.2);  color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.35); }
+.status-qualified { background: rgba(139, 92, 246, 0.2);  color: #c4b5fd; border: 1px solid rgba(139, 92, 246, 0.35); }
+.status-converted { background: rgba(34, 197, 94, 0.2);   color: #86efac; border: 1px solid rgba(34, 197, 94, 0.35); }
+.status-lost      { background: rgba(239, 68, 68, 0.2);   color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.35); }
+
+/* Row actions */
+.row-actions {
+  display: flex;
+  gap: 6px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 14px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.page-info {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+}

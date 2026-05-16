@@ -1,0 +1,58 @@
+/* ═══════════════════════════════════════════════
+   ADD LEAD PAGE  –  Dark theme
+   ═══════════════════════════════════════════════ */
+
+.add-lead-page {
+  max-width: 700px;
+}
+
+.add-lead-card {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(30, 41, 59, 0.96));
+  border: 1px solid rgba(59, 130, 246, 0.18);
+  border-radius: 24px;
+  padding: 34px;
+  backdrop-filter: blur(22px);
+  box-shadow: 0 26px 80px rgba(15, 23, 42, 0.35);
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 900;
+  background: linear-gradient(90deg, #a78bfa, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 6px;
+  letter-spacing: -0.4px;
+}
+
+.section-sub {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 28px;
+  font-weight: 500;
+}
+
+.add-lead-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 520px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  padding-top: 8px;
+}

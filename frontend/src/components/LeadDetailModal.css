@@ -1,0 +1,301 @@
+/* ═══════════════════════════════════════════════
+   LEAD DETAIL MODAL  –  Dark theme
+   ═══════════════════════════════════════════════ */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 16px;
+  animation: backdropIn 0.2s ease;
+  backdrop-filter: blur(8px);
+}
+
+@keyframes backdropIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modal {
+  background: rgba(17, 14, 40, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(124, 58, 237, 0.15);
+  width: 100%;
+  max-width: 580px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  animation: modalIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  backdrop-filter: blur(30px);
+  overflow: hidden;
+}
+
+@keyframes modalIn {
+  from { transform: translateY(30px) scale(0.97); opacity: 0; }
+  to   { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+/* ── Header ── */
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 22px 24px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(124, 58, 237, 0.08);
+  flex-shrink: 0;
+}
+
+.modal-name {
+  font-size: 20px;
+  font-weight: 900;
+  background: linear-gradient(90deg, #a78bfa, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.4px;
+  margin-bottom: 4px;
+}
+
+.modal-email {
+  font-size: 13px;
+  color: rgba(167, 139, 250, 0.7);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.modal-email:hover {
+  color: #a78bfa;
+  text-decoration: underline;
+}
+
+.modal-close {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+}
+
+/* ── Body ── */
+.modal-body {
+  overflow-y: auto;
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(124, 58, 237, 0.3) transparent;
+}
+
+.modal-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: rgba(124, 58, 237, 0.3);
+  border-radius: 99px;
+}
+
+/* Info grid */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-label {
+  font-size: 10.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.info-value {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+/* Message */
+.lead-message {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lead-message p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Status section */
+.status-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(124, 58, 237, 0.08);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  padding: 16px;
+  border-radius: 14px;
+}
+
+.status-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.status-select-modal {
+  flex: 1;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.status-new       { background: rgba(59, 130, 246, 0.2);  color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.35); }
+.status-contacted { background: rgba(245, 158, 11, 0.2);  color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.35); }
+.status-qualified { background: rgba(139, 92, 246, 0.2);  color: #c4b5fd; border: 1px solid rgba(139, 92, 246, 0.35); }
+.status-converted { background: rgba(34, 197, 94, 0.2);   color: #86efac; border: 1px solid rgba(34, 197, 94, 0.35); }
+.status-lost      { background: rgba(239, 68, 68, 0.2);   color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.35); }
+
+/* Notes section */
+.notes-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  padding-top: 20px;
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.notes-empty {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.25);
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+
+.note-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 12px 14px;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.note-item:hover {
+  border-color: rgba(124, 58, 237, 0.3);
+  background: rgba(124, 58, 237, 0.06);
+}
+
+.note-meta {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.note-author {
+  font-size: 12px;
+  font-weight: 700;
+  color: #a78bfa;
+}
+
+.note-date {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.note-text {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  padding-right: 24px;
+  margin: 0;
+}
+
+.note-delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.2);
+  padding: 3px 5px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.note-delete:hover {
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.15);
+}

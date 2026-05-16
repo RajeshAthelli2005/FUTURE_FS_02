@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/FUTURE_FS_02/static/css/main.07b4d7e2.css",
+    "main.js": "/FUTURE_FS_02/static/js/main.25e82d4a.js",
+    "index.html": "/FUTURE_FS_02/index.html",
+    "main.07b4d7e2.css.map": "/FUTURE_FS_02/static/css/main.07b4d7e2.css.map",
+    "main.25e82d4a.js.map": "/FUTURE_FS_02/static/js/main.25e82d4a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07b4d7e2.css",
+    "static/js/main.25e82d4a.js"
+  ]
+}
